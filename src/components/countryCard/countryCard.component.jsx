@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card'
 
 import "./countryCard.style.css";
 
+const date = new Date();
 
 const CountryCard = ({country, 
                       activeCases, 
