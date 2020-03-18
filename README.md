@@ -3,6 +3,9 @@ This project tracks the current tally for the COVID-19 virus
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm install`
+
+Installs application dependencies
 
 ### `npm start`
 
