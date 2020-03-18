@@ -3,8 +3,6 @@ import Card from 'react-bootstrap/Card'
 
 import "./countryCard.style.css";
 
-const date = new Date();
-const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
 
 const CountryCard = ({country, 
                       activeCases, 

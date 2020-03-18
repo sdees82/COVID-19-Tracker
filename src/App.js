@@ -3,8 +3,10 @@ import Search from "./components/search/search.component";
 import CardList from "./components/cardList/cardList.component";
 import Loader from 'react-loader-spinner'
 
+
 import './App.css';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component{
   constructor(){
