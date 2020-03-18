@@ -1,0 +1,7 @@
+.card-list-container{
+    padding: 2rem;
+    max-width: 1600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

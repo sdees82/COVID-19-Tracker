@@ -1,0 +1,15 @@
+.search-container{
+    width: 100%;
+}
+
+.search-container input{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid gray;
+    color: #fff;
+    width: 43%;
+}
+
+.search-container input:focus{
+    outline: none;
+}

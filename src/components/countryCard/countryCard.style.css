@@ -1,0 +1,12 @@
+.card-title{
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+.card-container p{
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.text-muted{
+    font-size: 1.3rem;
+}

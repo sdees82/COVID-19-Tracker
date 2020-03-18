@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  /* background: url("./images/covid-wallpaper.jpg"); */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 2rem;
+}
+
+p{
+  margin: .5rem 0;
+  border-bottom: 1px solid gray;
+  padding: .2rem 0;
+}
