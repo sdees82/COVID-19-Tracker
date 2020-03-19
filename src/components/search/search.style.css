@@ -1,5 +1,6 @@
 .search-container{
     width: 100%;
+    min-width: 300px;
 }
 
 .search-container input{
@@ -12,4 +13,10 @@
 
 .search-container input:focus{
     outline: none;
+}
+
+@media screen and (max-width: 600px){
+    .search-container input{
+        width: 90%;
+    }
 }
