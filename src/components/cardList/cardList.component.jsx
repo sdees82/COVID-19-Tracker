@@ -30,12 +30,12 @@ const missingCountries = {
     "Vatican City" : "VA",
     "St. Vincent Grenadines" : "VC",
     "Sint Maarten" : "SX",
-    "Syria": "SY"
+    "Syria": "SY",
+    "Turks an Caicos" : "TC"
   
   }
   
   const getCountry = (country) =>{
-      console.log(missingCountries[country]);
     return getCode(country) !== undefined ? getCode(country) : missingCountries[country];
   }
 
