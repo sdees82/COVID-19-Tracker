@@ -30,6 +30,7 @@ const missingCountries = {
     "Vatican City" : "VA",
     "St. Vincent Grenadines" : "VC",
     "Sint Maarten" : "SX",
+    "Syria": "SY"
   
   }
   
