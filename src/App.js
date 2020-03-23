@@ -21,13 +21,11 @@ class App extends React.Component{
     fetch("https://coronavirus-19-api.herokuapp.com/countries")
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       this.setState({countryData: data});
     });
   }
 
   handleSearch = (e) =>{
-    console.log(e.target.value);
     this.setState({searchItem: e.target.value});
   }
 
