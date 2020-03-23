@@ -1,6 +1,6 @@
 This project tracks the current tally for the COVID-19 virus
 
-### Demo can be viewed [here](https://https://wonderful-newton-e33b42.netlify.com/) 
+### Demo can be viewed [here](https://wonderful-newton-e33b42.netlify.com/) 
 
 ## Available Scripts
 
