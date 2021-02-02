@@ -18,6 +18,7 @@ class App extends React.Component{
     }
   }
 
+  //Fetch data from API when page loads
   componentDidMount(){
     fetch("https://coronavirus-19-api.herokuapp.com/countries")
     .then(response => response.json())
@@ -26,6 +27,7 @@ class App extends React.Component{
     }).catch(err=> this.setState({...this.state.error, error: true}))
   }
 
+  //Handle text input changes
   handleSearch = (e) =>{
     this.setState({...this.state.searchItem, searchItem: e.target.value});
   }
