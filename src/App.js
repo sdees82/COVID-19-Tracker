@@ -13,7 +13,8 @@ class App extends React.Component{
     super();
     this.state = {
       countryData: [],
-      searchItem: ""
+      searchItem: "",
+      error: null
     }
   }
 
@@ -21,12 +22,12 @@ class App extends React.Component{
     fetch("https://coronavirus-19-api.herokuapp.com/countries")
     .then(response => response.json())
     .then(data => {
-      this.setState({countryData: data});
-    });
+      this.setState({...this.state.countryData, countryData: data});
+    }).catch(err=> this.setState({...this.state.error, error: true}))
   }
 
   handleSearch = (e) =>{
-    this.setState({searchItem: e.target.value});
+    this.setState({...this.state.searchItem, searchItem: e.target.value});
   }
 
   render(){
@@ -37,11 +38,18 @@ class App extends React.Component{
       <div className="App">
         <header className="App-header">
         {
-          this.state.countryData.length === 0 ? <Loader type="CradleLoader" color="#00BFFF" height={100} width={100} timeout={3000}/> : (
-            <React.Fragment>
+          this.state.countryData.length === 0 ? (<Loader type="CradleLoader" color="#00BFFF" height={100} width={100} timeout={3000}/>) : (
+            this.state.error !== true ? (
+              <React.Fragment>
               <Search handleSearch={this.handleSearch}/>
               <CardList countryData={filterData}/>
-          </React.Fragment>   
+          </React.Fragment> 
+            ): (
+              <div>
+                <h1>Sorry, there was an error loading the information</h1>
+              </div>
+            )
+    
           )
         }
         </header>

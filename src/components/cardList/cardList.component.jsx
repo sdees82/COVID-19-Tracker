@@ -31,7 +31,14 @@ const missingCountries = {
     "St. Vincent Grenadines" : "VC",
     "Sint Maarten" : "SX",
     "Syria": "SY",
-    "Turks and Caicos" : "TC"
+    "Turks and Caicos" : "TC",
+    "Caribbean Netherlands" : "BQ",
+    "British Virgin Islands" : "VG",
+    "Laos": "LA",
+    "Saint Pierre Miquelon": "PM",
+    "Falkland Islands": "FK",
+    "Micronesia": "FM",
+
   
   }
   
@@ -43,17 +50,17 @@ const CardList = ({countryData}) => {
     return ( 
         <div className="card-list-container">
         {
-            countryData.map((countries, index) => {
+            countryData.filter((countries => countries.country.toLowerCase() !== "world" && countries.country.toLowerCase() !== "ms zaandam")).map((countries, index) => {
                 return(
                     <CountryCard
                     key={index}
                     country={countries.country}
-                    activeCases={countries.active}
+                    activeCases={countries.active === null ? "N/A" : countries.active}
                     todayCases={countries.todayCases}
                     totalCases={countries.cases}
                     deaths={countries.deaths}
                     todayDeaths={countries.todayDeaths}
-                    recoveredCases={countries.recovered}
+                    recoveredCases={countries.recovered === null ? "N/A" : countries.recovered}
                     critical={countries.critical}
                     imageSrc={`https://www.countryflags.io/${getCountry(countries.country)}/flat/64.png`}
                     />
